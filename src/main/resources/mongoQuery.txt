@@ -1,0 +1,17 @@
+db.createUser(
+   {
+     user: "admin",
+     pwd: "admin",
+     roles: [ "root", "dbAdmin" ]
+   }
+)
+
+db.users.insert({
+	"_id" : "admin",
+	"className" : "com.reports.entity.Users",
+	"studentName" : "admin",
+	"password" : "$2a$10$kD.//qfOYjczoqev7Mo4seV1I/j3b6wKCzwTufJ9ujEfK1F3cRtbS",
+	"role" : "ADMIN"
+})
+
+mongo --username admin --password admin --authenticationDatabase admin --port 27017
