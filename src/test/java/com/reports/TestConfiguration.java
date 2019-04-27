@@ -30,6 +30,7 @@ public class TestConfiguration {
         return morphia;
     }
 
+    @SuppressWarnings("deprecation")
     @Bean
     public Datastore dataStore() {
 
