@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.client.HttpServerErrorException.BadGateway;
 import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
@@ -16,7 +15,7 @@ public class ControllerExceptionHandlerAdvice {
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<String> handle(BadCredentialsException bce) {
-        return genericHandle("Invalid username or password", HttpStatus.UNAUTHORIZED);
+        return genericHandle("Invalid username or password", HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(IOException.class)
@@ -28,14 +27,6 @@ public class ControllerExceptionHandlerAdvice {
     public ResponseEntity<String> handle(ParseException e) {
 
         return genericHandle("Unable to parse :: ".concat(e.getMessage()), HttpStatus.BAD_REQUEST);
-
-    }
-
-    @ExceptionHandler(value = { BadGateway.class })
-    protected ResponseEntity<Object> handleUncaughtException(BadGateway bg, WebRequest request) {
-
-        String message = "Bad Gagteway";
-        return new ResponseEntity<Object>(message.concat(" :: ".concat(bg.getMessage())), HttpStatus.BAD_REQUEST);
 
     }
 

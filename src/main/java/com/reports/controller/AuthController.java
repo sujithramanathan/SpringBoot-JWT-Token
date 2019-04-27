@@ -39,7 +39,6 @@ public class AuthController {
     @Autowired
     private ReportService reportService;
 
-    // /v1/auth/token
     @PostMapping("/token")
     public ResponseEntity<Object> signin(@RequestHeader(value = "userId") String userId,
             @RequestHeader(value = "password") String password) {
