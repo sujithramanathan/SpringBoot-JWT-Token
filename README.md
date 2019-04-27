@@ -12,4 +12,4 @@ Open endpoints require no Authentication.
 ## Endpoints that require Authentication
 
 Secured endpoints require a valid Token to be included in the header of the
-request. A Token can be acquired from the Login view above and the user should have appropriate roles.
+request. A Token can be acquired from the Login view above and the user should have appropriate roles to access these features.
