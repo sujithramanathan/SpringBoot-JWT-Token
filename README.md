@@ -13,4 +13,4 @@ Open endpoints require no Authentication.
 
 Secured endpoints require a valid Token to be included in the header of the
 request. A Token can be acquired from the Login view above and the user should have appropriate roles to access these features.
-* [SignUp](SignUp.md) : `POST /v1/auth/signup/{userName}`
+* [Sign Up](SignUp.md) : `POST /v1/auth/signup/{userName}`
