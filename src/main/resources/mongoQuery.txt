@@ -14,4 +14,8 @@ db.users.insert({
 	"role" : "ADMIN"
 })
 
+$2a$10$MYo0dazz6wZ2HYne5s7BkOOp.Seb1FZ7JD/13/e0q41bfPvy6EdgO
+$2a$10$N1.xF/HJ.joS6H1X15vbsegRnje0utrK/JciY5wi5/cq3CkGQC3CO
+
+
 mongo --username admin --password admin --authenticationDatabase admin --port 27017

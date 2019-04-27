@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.client.HttpServerErrorException.BadGateway;
 import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
@@ -30,10 +31,18 @@ public class ControllerExceptionHandlerAdvice {
 
     }
 
+    @ExceptionHandler(value = { BadGateway.class })
+    protected ResponseEntity<Object> handleUncaughtException(BadGateway bg, WebRequest request) {
+
+        String message = "Bad Gagteway";
+        return new ResponseEntity<Object>(message.concat(" :: ".concat(bg.getMessage())), HttpStatus.BAD_REQUEST);
+
+    }
+
     @ExceptionHandler(value = { Exception.class })
     protected ResponseEntity<Object> handleUncaughtException(Exception ex, WebRequest request) {
 
-        String message = "Something bad happened";
+        String message = "Generic Exception";
         return new ResponseEntity<Object>(message.concat(" :: ".concat(ex.getMessage())), HttpStatus.BAD_REQUEST);
 
     }

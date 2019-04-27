@@ -44,9 +44,12 @@ public class AcademicController {
             @PathVariable String standard) throws ParseException {
 
         standard = standard.toUpperCase();
-        reportService.initiateAcademicReport(academicYear, standard);
-
-        return new ResponseEntity<>("Report Initatied ", HttpStatus.CREATED);
+        if (reportService.initiateAcademicReport(academicYear, standard)) {
+            return new ResponseEntity<>("Report Created ", HttpStatus.CREATED);
+        }
+        else {
+            return new ResponseEntity<>("Unable to create content ", HttpStatus.NO_CONTENT);
+        }
 
     }
 

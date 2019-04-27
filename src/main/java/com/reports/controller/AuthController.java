@@ -39,6 +39,7 @@ public class AuthController {
     @Autowired
     private ReportService reportService;
 
+    // /v1/auth/token
     @PostMapping("/token")
     public ResponseEntity<Object> signin(@RequestHeader(value = "userId") String userId,
             @RequestHeader(value = "password") String password) {
@@ -53,6 +54,7 @@ public class AuthController {
             List<String> roles = Arrays.asList(student.getRole().split(","));
             token = jwtTokenProvider.createToken(userId, roles);
         } catch (AuthenticationException e) {
+            e.printStackTrace();
             throw new BadCredentialsException("Invalid username/password supplied");
         }
         return new ResponseEntity<Object>(token, HttpStatus.CREATED);
