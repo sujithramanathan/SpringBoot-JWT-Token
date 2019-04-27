@@ -23,7 +23,6 @@ Student will get their list of mark report. Student has to generate the token an
 **Content example**
 
 ```data
-```json
 [
     {
         "id": "5cc0c8814a18bf5e585aa1f0",
@@ -80,7 +79,6 @@ Student will get their list of mark report. Student has to generate the token an
         }
     }
 ]
-```
 ```
 
 ## Error Response
