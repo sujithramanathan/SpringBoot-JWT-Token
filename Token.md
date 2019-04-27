@@ -19,7 +19,7 @@ Create a token for registered user.
 
 ## Success Response
 
-**Code** : `201 OK`
+**Code** : `201 Created`
 
 **Content example**
 
