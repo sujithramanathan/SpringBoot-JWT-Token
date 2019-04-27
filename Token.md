@@ -24,7 +24,7 @@ Used to collect a Token for a registered User.
 **Content example**
 
 ```data
-You will get token in a plain text which is valid for 10 mins.
+You will get token which is a plain text and valid for 10 mins.
 ```
 
 ## Error Response
