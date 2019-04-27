@@ -1,6 +1,6 @@
 # Login
 
-Used to collect a Token for a registered User.
+Create a token for registered user.
 
 **URL** : `/v1/auth/token`
 
