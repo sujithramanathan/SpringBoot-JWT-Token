@@ -15,7 +15,7 @@ Admin user can able to create login for students.
 {
     "userId" : "userId as student roll number",
     "password" : "password as plain text",
-    "role" : "ROLE (Incase of empty, then role will be set as STUDENT)",
+    "role" : "ROLE (Incase of empty string, then role will be set as STUDENT)",
     "Authorization": "Token",
 }
 ```
