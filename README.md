@@ -7,4 +7,4 @@ This is an example of SpringBoot + JWT Token ( Authentication, Authorization ) +
 Open endpoints require no Authentication.
 
 * [Token](Token.md) : `POST /v1/auth/token`
-* [Token](GetMarks.md) : `GET /v1/reports/get/marks`
+* [Get Marks](GetMarks.md) : `GET /v1/reports/get/marks`
