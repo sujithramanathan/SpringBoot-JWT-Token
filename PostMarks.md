@@ -1,7 +1,7 @@
 
 # Post Marks
 
-Admin user can able to upload marks students. This API is having passing criteria threshold, once a student mark is getting uploaded the API will perform totalMarks, percentage and status (Pass or Fail based on threshold ) operations with the raw data.
+Admin user can able to upload student marks. This API has simple analytics which will make data more meaningful, once a student mark is getting uploaded the API will calculate totalMarks, percentage and status (Pass or Fail based on threshold ) with raw data which was sent by Teacher (ADMIN).
 
 **URL** : `/v1/reports/post/marks`
 
@@ -15,7 +15,7 @@ Admin user can able to upload marks students. This API is having passing criteri
 {
     "userId" : "userId as student roll number",
     "password" : "password as plain text",
-    "role" : "ROLE (Incase of empty string, then role will be set as STUDENT)",
+    "role" : "Authority (ADMIN)",
     "Authorization": "Token",
 }
 ```
