@@ -1,7 +1,7 @@
 
 # Post Marks
 
-Admin user can able to create login for students.
+Admin user can able to upload marks students. This API is having passing criteria threshold, once a student mark is getting uploaded the API will perform totalMarks, percentage and status (Pass or Fail based on threshold ) operations with the raw data.
 
 **URL** : `/v1/reports/post/marks`
 
