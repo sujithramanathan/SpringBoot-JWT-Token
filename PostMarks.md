@@ -23,10 +23,18 @@ Admin user can able to upload student marks. This API has simple analytics which
 **Request Body**
 ```json
 {
-    "rollNo" : "student roll number",
-    "standard" : "standard / class",
-    "examType" : "Quarterly / HalfYearly / Annual",
-    "marks": {"subject":"marks","subject":"marks"}
+	"rollNo": "S003",
+	"timestamp": 1557134033131,
+	"standard":"X",
+	"examType":"annual",
+	"marks": {
+		"maths": 94.0,
+		"english": 33.0,
+		"kannada": 90.0,
+		"physics": 80.0,
+		"chemistry": 82.5,
+		"computer": 92.0
+	}
 }
 
 
