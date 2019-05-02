@@ -36,7 +36,7 @@ Admin user can able to upload student marks. This API has simple analytics which
 		"computer": 92.0
 	}
 }
-
+```
 
 ## Success Response
 
